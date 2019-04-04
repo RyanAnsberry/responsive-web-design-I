@@ -59,8 +59,7 @@ h1, h2, h3, h4, h5 {
 }
 
 body {
-	width: 100%;
-	max-width: 876px;
+	width: 876px;
 	margin: 0 auto;
 }
 
@@ -99,7 +98,6 @@ a:hover {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-
 }
 
 .getStarted h1 {
@@ -133,7 +131,7 @@ h2 {
 }
 
 .features .about {
-	width: 45%;
+	width: 5%;
 }
 
 .lowerContent {
@@ -166,6 +164,74 @@ footer {
 	text-align: center;
 }
 
+/* -------Services CSS----------*/
+
+h3 {
+	font-size: 180%;
+}
+.summary {
+	margin: 40px 0;
+}
+
+.summary h1 {
+	font-size: 200%
+}
+/* Card container */
+.mainContent {
+	width:100%;
+	height: 853px;
+	padding: 40px 0;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-top: 1px solid black;
+	border-bottom: 2px solid black;
+}
+/* Cards */
+.mainContent div{
+	width: 420px;
+	height:230px;
+	padding:20px;
+	border: 1px solid black;
+	background: #f4f3f4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Facts {
+	width: 50%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+ul {
+	list-style-type: disc;
+	list-style-position: inside;
+	line-height: 2;
+}
+
+.mainContent div button {
+	background: white;
+	border: 1px solid black;
+	padding: 8px 40px;
+	border-radius: 5px;
+}
+
+.mainContent div button:hover {
+	background: lightblue;
+	color: whitesmoke;
+}
+
+.services-footer {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+/* Tablet */
 @media(max-width: 800px){
 	body {
 		width: 90%;
@@ -194,9 +260,15 @@ footer {
 		height: auto;
 	}
 
+	/* Services Page */
+	.services-header-img {
+		width: 100%;
+		height: auto;
+	}
+
 }
 
-
+/* Phone */
 @media(max-width: 500px){
 	html, body {
 		width:100%;
@@ -204,20 +276,23 @@ footer {
 	}
 
 	header {
-		height:35%;
-		margin: 10px 0;
+		height: 282px;
+		margin: 0;
 	}
+
+	header .logo {
+		padding: 10px 0;	}
 
 	header nav {
 		display:flex;
-		flex-direction: column;
-		height: 80%;	
+		flex-direction: column;	
 	}
 
 	header nav a{
 		text-align: center;
 		padding: 10px 100%;
 		border: 1px solid black;
+		color: #555;
 	}
 
 	header nav a:hover {
@@ -225,9 +300,10 @@ footer {
 		color: #ccc;
 	}
 
-	.upperContent, .lowerContent, footer {
+	.upperContent, .lowerContent {
 		flex-direction: column;
 		margin: 0 5%;
+		padding-bottom: 10px;
 	}
 
 	.middle-img {
@@ -237,5 +313,10 @@ footer {
 
 	.features, .about, .services, .product, .vision {
 		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	footer {
+		margin: 0 5%;
 	}
 }
