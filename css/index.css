@@ -1,3 +1,361 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
 
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+body {
+	width: 876px;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+
+header nav {
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+a {
+	color:#bababa;
+}
+
+a:hover {
+	color:#000;
+}
+
+/* top banner */
+.banner {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 80px 0;
+}
+
+.getStarted {
+	width: 379px;
+	height: 379px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.getStarted h1 {
+	font-size: 450%;
+	text-align: center;
+}
+
+.getStarted button {
+	width: 140px;
+	height: 30px;
+	border: 1px solid black;
+	background: white;
+	font-weight: bold;
+
+}
+
+.getStarted button:hover {
+	background: lightblue;
+	color: whitesmoke;
+}
+/* content section */
+h2 {
+	font-size: 150%;
+}
+
+.upperContent {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0;
+	border-top: 2px solid black;
+}
+
+.features .about {
+	width: 5%;
+}
+
+.lowerContent {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0;
+	border-bottom: 1px solid black;
+}
+
+.services, .product, .vision {
+	width: 32%;
+}
+
+/* Contact/Footer */
+
+footer {
+	padding: 40px 0;
+}
+
+.contact {
+	display:flex;
+	width: 100%;
+	height: 100px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.copywrite {
+	margin: 0 0 40px;
+	text-align: center;
+}
+
+/* -------Services CSS----------*/
+
+h3 {
+	font-size: 180%;
+}
+.summary {
+	margin: 40px 0;
+}
+
+.summary h1 {
+	font-size: 200%
+}
+
+/* Card container */
+.mainContent {
+	width:100%;
+	height: 853px;
+	padding: 40px 0;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	border-top: 1px solid black;
+	border-bottom: 2px solid black;
+}
+
+/* Cards */
+.mainContent div{
+	width: 420px;
+	height:230px;
+	padding:20px;
+	border: 1px solid black;
+	background: #f4f3f4;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Facts {
+	width: 50%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+ul {
+	list-style-type: disc;
+	list-style-position: inside;
+	line-height: 2;
+}
+
+.mainContent div button {
+	background: white;
+	border: 1px solid black;
+	padding: 8px 40px;
+	border-radius: 5px;
+}
+
+.mainContent div button:hover {
+	background: lightblue;
+	color: whitesmoke;
+}
+
+.services-footer {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+/* Tablet */
+@media(max-width: 800px){
+	body {
+		width: 90%;
+	}
+
+	header {
+		flex-direction: column-reverse;
+		align-items: center;
+		height: 15%;
+	}
+
+	header nav {
+		width:100%;
+	}
+
+	.banner {
+		margin: 20px 0;
+	}
+
+	.banner img {
+		display: none;
+	}
+
+	.middle-img {
+		width: 100%;
+		height: auto;
+	}
+
+	/* Services Page */
+	.services-header-img {
+		width: 100%;
+		height: auto;
+	}
+
+	.mainContent {
+		height: auto;
+	}
+
+	.mainContent div {
+		width: 46%;
+		height: auto;
+		margin-bottom: 40px;
+	}
+
+	.Facts {
+		width: 100%;
+	}
+
+	footer .services-info-img {
+		width: 50%;
+		height: 50%;
+	}
+
+}
+
+/* Phone */
+@media(max-width: 500px){
+	html, body {
+		width:100%;
+		margin: 0;
+	}
+
+	header {
+		height: 282px;
+		margin: 0;
+	}
+
+	header .logo {
+		padding: 10px 0;	}
+
+	header nav {
+		display:flex;
+		flex-direction: column;	
+	}
+
+	header nav a{
+		text-align: center;
+		padding: 10px 100%;
+		border: 1px solid black;
+		color: #555;
+	}
+
+	header nav a:hover {
+		background: #222;
+		color: #ccc;
+	}
+
+	.upperContent, .lowerContent {
+		flex-direction: column;
+		margin: 0 5%;
+		padding-bottom: 10px;
+	}
+
+	.middle-img {
+		margin: 0 5%;
+		width: 90%;
+	}
+
+	.features, .about, .services, .product, .vision {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	footer {
+		margin: 0 5%;
+	}
+
+	/* services page */
+	.summary {
+		width: 90%;
+		margin: 40px auto;
+	}
+	.mainContent{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.mainContent div {
+		width: 100%;
+	}
+
+	footer .services-info-img {
+		display: none;
+	}
+}
